@@ -182,3 +182,18 @@ footer {
   background-color: #2c3e50;
   color: white;
 }
+// JavaScript for Interactivity
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Add interactivity to the "Get Started" button
+document.querySelector('.cta-button').addEventListener('click', () => {
+  alert('Welcome to PlayFin! Let’s get started.');
+});
